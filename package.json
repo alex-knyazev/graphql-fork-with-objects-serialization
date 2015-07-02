@@ -1,67 +1,56 @@
 {
-  "name": "graphql",
-  "version": "15.0.0",
-  "description": "A Query Language and Runtime which can target any service.",
-  "license": "MIT",
-  "private": true,
-  "main": "index",
-  "module": "index.mjs",
-  "types": "index.d.ts",
-  "sideEffects": false,
-  "homepage": "https://github.com/graphql/graphql-js",
+  "_args": [
+    [
+      "git+https://github.com/alex-knyazev/graphql-fork-with-objects-serialization.git",
+      "/home/alex/pump/core"
+    ]
+  ],
+  "_from": "git+https://github.com/alex-knyazev/graphql-fork-with-objects-serialization.git",
+  "_id": "graphql@git+https://github.com/alex-knyazev/graphql-fork-with-objects-serialization.git#55b00ef179e8257a265277219dcd7834e34089bd",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/graphql",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/alex-knyazev/graphql-fork-with-objects-serialization.git",
+    "rawSpec": "git+https://github.com/alex-knyazev/graphql-fork-with-objects-serialization.git",
+    "saveSpec": "git+https://github.com/alex-knyazev/graphql-fork-with-objects-serialization.git",
+    "fetchSpec": "https://github.com/alex-knyazev/graphql-fork-with-objects-serialization.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/alex-knyazev/graphql-fork-with-objects-serialization.git#55b00ef179e8257a265277219dcd7834e34089bd",
+  "_shasum": "504f3d3114cb9a0a3f359bbbcf38d9e5bf6a6b3c",
+  "_spec": "git+https://github.com/alex-knyazev/graphql-fork-with-objects-serialization.git",
+  "_where": "/home/alex/pump/core",
   "bugs": {
     "url": "https://github.com/graphql/graphql-js/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/graphql/graphql-js.git"
+  "dependencies": {
+    "iterall": "^1.2.2"
   },
+  "deprecated": false,
+  "description": "A Query Language and Runtime which can target any service.",
+  "engines": {
+    "node": ">= 6.x"
+  },
+  "homepage": "https://github.com/graphql/graphql-js#readme",
   "keywords": [
     "graphql",
     "graphql-js"
   ],
-  "engines": {
-    "node": ">= 10.x"
+  "license": "MIT",
+  "main": "index",
+  "module": "index.mjs",
+  "name": "graphql",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graphql/graphql-js.git"
   },
-  "scripts": {
-    "test": "npm run prettier:check && npm run lint && npm run check && npm run testonly && npm run check:ts && npm run check:spelling",
-    "test:ci": "yarn check --integrity && npm run prettier:check && npm run lint -- --no-cache && npm run check && npm run testonly:cover && npm run check:ts && npm run check:spelling && npm run build",
-    "testonly": "mocha --full-trace src/**/__tests__/**/*-test.js",
-    "testonly:cover": "nyc npm run testonly",
-    "lint": "eslint --cache --ext .js,.ts src resources",
-    "benchmark": "node --noconcurrent_sweeping --expose-gc --predictable ./resources/benchmark.js",
-    "prettier": "prettier --ignore-path .gitignore --write --list-different \"**/*.{js,ts,md,json,yml}\"",
-    "prettier:check": "prettier --ignore-path .gitignore --check \"**/*.{js,ts,md,json,yml}\"",
-    "check": "flow check",
-    "check:ts": "dtslint src",
-    "check:cover": "node resources/check-cover.js && nyc report --nycrc-path .nycflowrc.yml",
-    "check:spelling": "cspell \"./{src/**/,resources**/,}*.{js,ts,md,graphql}\"",
-    "build": "node resources/build.js",
-    "changelog": "node resources/gen-changelog.js",
-    "preversion": ". ./resources/checkgit.sh && yarn check --integrity",
-    "version": "node resources/gen-version.js && npm test && git add src/version.js",
-    "gitpublish": ". ./resources/gitpublish.sh"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@babel/core": "7.9.0",
-    "@babel/plugin-transform-flow-strip-types": "7.9.0",
-    "@babel/preset-env": "7.9.0",
-    "@babel/register": "7.9.0",
-    "@typescript-eslint/eslint-plugin": "2.26.0",
-    "@typescript-eslint/parser": "2.26.0",
-    "babel-eslint": "10.1.0",
-    "chai": "4.2.0",
-    "cspell": "4.0.55",
-    "dtslint": "3.4.1",
-    "eslint": "6.8.0",
-    "eslint-plugin-flowtype": "4.7.0",
-    "eslint-plugin-graphql-internal": "link:./resources/eslint-rules",
-    "eslint-plugin-import": "2.20.2",
-    "flow-bin": "0.121.0",
-    "mocha": "7.1.1",
-    "nyc": "15.0.0",
-    "prettier": "2.0.2",
-    "typescript": "^3.8.3"
-  }
+  "sideEffects": false,
+  "types": "index.d.ts",
+  "version": "14.5.8"
 }
